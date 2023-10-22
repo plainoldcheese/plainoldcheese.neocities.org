@@ -3,7 +3,7 @@
     --neon-color: plum;
 }
 body {
-    background-image: url(gt.webp);
+    background-image: url("bg.gif");
     background-repeat:  repeat;
 }
 
@@ -12,11 +12,13 @@ main {
   background-repeat: repeat;
   border: 5px solid rgb(20,0,50);
   border-radius: 10px;
+  margin: 25vh auto;
+  height: 85vh;
+  max-width: 500px;
 }
 
 iframe{
-    border-radius: 10px;
-    max-width: var(--content-width);
+   border-radius: 10px;
 }
 
 .neon-sign{
