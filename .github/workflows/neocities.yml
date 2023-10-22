@@ -29,9 +29,10 @@ jobs:
     # When the dist_dir is ready, deploy it to neocities
     # get api key at
     # https://neocities.org/settings/plainoldcheese#api_key
-    - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v1
+    - name: 🐈 Deploy to Neocities
+      uses: bcomnes/deploy-to-neocities@master
+      if: ${{ env.NEOCITIES_API_TOKEN }}
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-        cleanup: true
+        cleanup: false
         dist_dir: public
