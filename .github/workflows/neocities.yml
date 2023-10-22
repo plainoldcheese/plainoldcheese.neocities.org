@@ -1,23 +1,22 @@
-# get api key at
-# https://neocities.org/settings/plainoldcheese#api_key
+name: 🐈 Deploy to neocities
 
-name: 🐈 Build site
-
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      - run: echo "run"
-
-      - name: 🖌️deploy to neocities
-        if: ${{ steps.deploy.outcome == 'failure' && github.ref == 'refs/heads/main' }}
-        uses: jonchang/deploy-neocities@master
+      - uses: actions/checkout@v4
+      # get api key at
+      # https://neocities.org/settings/plainoldcheese#api_key
+      - name: 🖥️Deploy to Neocities
+        uses: bcomnes/deploy-to-neocities@v1
+        if: ${{ env.NEOCITIES_API_TOKEN }}
         with:
-          key: ${{ secrets.NEOCITIES_API_KEY }}
-          dir: _site
-          clean: true
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: true
+          dist_dir: public
