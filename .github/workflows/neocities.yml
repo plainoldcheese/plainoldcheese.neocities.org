@@ -5,16 +5,20 @@ on:
     branches:
       - main
 
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     # get api key at
     # https://neocities.org/settings/plainoldcheese#api_key
     - name: Deploy to Neocities
-      uses: bcomnes/deploy-to-neocities@v1
+      uses: bcomnes/deploy-to-neocities@v3
       if: ${{ env.NEOCITIES_API_TOKEN }}
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
