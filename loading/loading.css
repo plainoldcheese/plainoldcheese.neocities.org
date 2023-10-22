@@ -1,0 +1,27 @@
+.gradient {
+    background: linear-gradient(335deg, #e75656, #56cfe7, #56e799, #e966cf, #edffbb, #5297f0);
+    background-size: 1200% 1200%;
+
+    animation: AnimationName 14s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 41%}
+    50%{background-position:100% 60%}
+    100%{background-position:0% 41%}
+}
+.container{
+    width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loading{
+    font-family: comic-sans, 'Comic Sans', fantasy;
+    text-decoration: blink;
+    font-size: xx-large;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+html {
+    background-color: black;
+}
+
+body {
+    font-family: terminus, modern-dos, monospace;
+    font-size: 22px;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: 155px auto 155px;
+    padding: 10px;
+}
+
+.grid-item {
+    border: 1px solid red;
+    color: white;
+}
+#band-conditions > img{
+    width: 155px;
+    image-rendering: crisp-edges;
+}
+img{
+    image-rendering: pixelated;
+    width: auto;
+}

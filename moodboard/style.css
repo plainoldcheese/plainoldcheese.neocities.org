@@ -1,0 +1,177 @@
+/* gallery */
+/* pure html color scheme */
+/*
+bisque
+lavender
+lavenderblush
+steelblue
+peru
+indianred
+thistle
+*/
+
+/* to do */
+/*
+ * add some way to show the source link of the image on hover
+ * add async loading
+ * lazy loading maybe
+ */
+
+/* css variables */
+:root {
+  --content-width: 800px;
+  --grid-gap: 15px;
+  --bg-color: lavenderblush;
+  --text-color: peru;
+  --accent-color: lavender;
+  --link-color: steelblue;
+  --link-visited-color: indianred;
+  --shadow-color: thistle;
+  --tile-bg-color: bisque;
+}
+
+
+/* general styling */
+body {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  margin-bottom: 100px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+h1,h2,h3,h4,h5{
+  color: var(--text-color);
+}
+code, pre {
+  background-color: var(--accent-color);
+  color: var(--link-color);
+  border-radius: 2px;
+  padding: 2px;
+  font-family: "mononoki", "Consolas", monospace;
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:visited{
+    color: var(--link-visited-color);
+}
+a:hover{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+header{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+header>h1{
+    text-shadow: 4px 4px var(--accent-color);
+}
+
+/*main container*/
+main {
+  margin: var(--grid-gap);
+  column-count: 3;
+  column-gap: calc(var(--grid-gap) * 1.2); /* for some reason theres an extra gap above the items that isn't part of the element 🤷‍♂️*/
+}
+
+/* all the types of items in the masonry grid */
+main > *,
+main > a > img{
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: calc(var(--grid-gap)*0.8);
+  margin: 0px;
+  margin-bottom: var(--grid-gap);
+  transition: all 0.2s ease-in-out;
+}
+
+main > *:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 2px var(--shadow-color);
+}
+
+main > a,
+main > blockquote,
+main > code,
+main > pre{
+    border-radius: var(--grid-gap);
+    padding: 20px;
+    background-color: var(--tile-bg-color);
+}
+
+main > pre{
+  padding: 0px;
+  font-size: 1rem;
+}
+
+main > a > img{
+  margin-bottom: 0px;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+
+@media  screen and (min-device-width : 721px){
+    .use-a-pc {
+      display: none;
+    }
+}
+@media screen and (max-device-width : 720px) {
+/* Styles */
+    main{
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        display: inline-block;
+        border-radius: calc(var(--grid-gap)*0.8);
+        margin: 0px;
+        margin-bottom: var(--grid-gap);
+        transition: all 0.2s ease-in-out;
+        column-count:2;
+    }
+    main > pre{
+    padding: 0px;
+    font-size: 0.8rem;
+    }
+    .use-a-pc {
+      display: inherit;
+    }
+}
+/* i wish this worked for showing the link on hover :( */
+/*
+    img:hover::after {
+        content: attr(src);
+        display: block;
+    }
+*/
+
+/* for when layout.css.grid-template-masonry-value.enabled finally gets enabled in firefox by default */
+
+/*
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--content-width) / 5), 1fr));
+    grid-template-rows: masonry;
+    grid-gap: var(--grid-gap);
+}
+
+main > * {
+  max-width: calc(var(--content-width) / 4);
+  width: 100%;
+  height: auto;
+  border-radius: var(--grid-gap);
+}
+
+*/

@@ -1,0 +1,30 @@
+body {
+    background-image: url(bg3.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: #513539;
+}
+img{
+    width: 90%;
+    margin-top: 2ch auto;
+    margin-bottom: 2ch;
+    border-style: ridge;
+    /* text-shadow: 2px 2px grey; */
+}
+a{
+    text-decoration: none;
+    color: #CE8B7F;
+}
+a:hover{
+    text-decoration: underline;
+}
+main {
+    margin-top: 4ch;
+    margin-bottom: 4ch;
+    padding-left: 2ch;
+    padding-right: 2ch;
+    max-width: 80ch;
+    margin:0 auto;
+    background-color: #E9E2E6;
+    border-style: ridge;
+}

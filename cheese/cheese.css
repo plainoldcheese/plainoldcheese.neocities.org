@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+:root{
+    --neon-color: plum;
+}
+body {
+    background-image: url(gt.webp);
+    background-repeat:  repeat;
+}
+
+main {
+  background-color: rgb(20,0,50);
+  background-repeat: repeat;
+  border: 5px solid rgb(20,0,50);
+  border-radius: 10px;
+}
+
+iframe{
+    border-radius: 10px;
+    max-width: var(--content-width);
+}
+
+.neon-sign{
+  transform: rotate(-15deg);
+  margin: 40px;
+  text-align: center;
+  font-size: 24px;
+  width: 6em;
+  font-weight: 200;
+  font-style: italic;
+  font-family: 'Satisfy', cursive;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: 0.2em solid #fff;
+  border-radius: 2em;
+  animation: flicker 1.5s infinite alternate;
+}
+
+aside{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+a{color: white;}
+a:hover{text-decoration: none;}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+
+        text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem purple,
+            0 0 4rem purple,
+            0 0 6rem purple,
+            0 0 8rem purple,
+            0 0 10rem purple;
+
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem purple,
+            inset 0 0 2rem purple,
+            0 0 4rem purple,
+            inset 0 0 4rem blueviolet;
+    }
+
+    20%, 24%, 55% {
+        text-shadow: none;
+        box-shadow: none;
+    }
+}

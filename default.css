@@ -1,0 +1,77 @@
+/* some better defaults for unstyled pages, it also provides a dark theme for users with it enabled*/
+
+@font-face {
+    font-family: modern-dos;
+    src: url(./fonts/modern_dos/ModernDOS8x8.ttf);
+}
+@font-face {
+    font-family: comic-sans;
+    src: url(./fonts/ldfcomicsans-font/Ldfcomicsans-jj7l.ttf);
+}
+@font-face {
+    font-family: terminus;
+    src: url(./fonts/terminus/TerminusTTF-4.49.2.ttf);
+}
+/* https://files.ax86.net/terminus-ttf/ */
+
+
+body {
+  font-size: 18px;
+  margin: auto;
+  padding: 0 16px;
+  line-height: 1.2em;
+}
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+footer {
+  text-align: center;
+  position: relative;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+h1,h2{
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: gainsboro;
+  }
+  a {
+    color: skyblue;
+  }
+  a:visited {
+    color: orchid;
+  }
+  h1,
+  h2 {
+    color: greenyellow;
+  }
+}
+
+@media  screen
+and (min-device-width : 721px){
+    .use-a-pc {
+      display: none;
+    }
+}
+@media screen and (max-device-width : 720px) {
+/* Styles */
+    main{
+        height: 100vh;
+        margin: 0 auto;
+        padding: 5px ;
+        text-align: center;
+    }
+    .use-a-pc {
+      display: inherit;
+    }
+}

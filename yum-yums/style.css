@@ -1,0 +1,41 @@
+html{
+		background-image: url("../bg-2.png");
+}
+body {
+	background-color: #C0C0AC ;
+	color: #3A3A34;
+	max-width: 800px ;
+	margin: 5vh auto ;
+	padding: 16px;
+}
+
+h1 {
+	text-align: center ;
+}
+
+footer {
+	text-align: center ;
+}
+
+img {
+	max-width: 600px ;
+	width: 100% ;
+	margin: auto ;
+	display: block ;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: black ;
+		color: gainsboro ;
+	}
+	a {
+		color: lightblue ;
+	}
+	a:visited {
+		color: plum ;
+	}
+	h2 {
+		color: aquamarine ;
+	}
+}

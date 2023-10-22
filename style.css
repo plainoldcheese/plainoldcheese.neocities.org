@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+:root {
+  --content-width: 400px;
+  --text-color: #209A50;
+  --pizza-color-a: #C0342C; /* red */
+  --pizza-color-b: #FCEBCA; /* cream */
+  --pizza-color-c: #E2924F; /* orange */
+  --bg-color: #072007;
+  --bg-color-b: #075020;
+}
+
+html{
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-image: url(bg.png);
+  background-repeat: repeat;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+}
+
+main > *{
+  margin: 1em;
+  padding: 1em;
+}
+
+section#main, aside{
+  max-width: var(--content-width);
+  height: 50vh;
+  overflow: clip;
+  border: 5px solid var(--text-color);
+  background-color: var(--bg-color);
+  padding: 2em;
+  width: 30vw
+}
+
+#mastodon-section{
+  overflow-wrap:  break-word;
+  overflow-y: scroll;
+}
+
+#mastodon-posts * {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+article#mastodon > a > article{
+margin: 3ch 0;
+padding: 0.5ch;
+  color: var(--pizza-color-b);
+background-color: var(--bg-color-b);
+
+}
+article#mastodon > a {
+	 text-decoration: none
+}
+
+article#mastodon > a > article > *{
+		display: block;
+margin: 5px auto;
+max-width: 90%;
+}
+
+
+footer{
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-align: center;
+  position: relative;
+}
+
+img{
+  image-rendering: pixelated;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--pizza-color-b);
+}
+
+a:hover {
+		background-color: var(--text-color);
+		color: var(--bg-color);
+		text-decoration: none;
+}
+
+h1 {
+  font-family: cursive;
+}
+
+.links {
+  float: left;
+  width: calc(var(--content-width) / 2);
+}
+
+#pizza {
+  float: right;
+  transition: transform 0.5s linear;
+  display: inline;
+  max-width: 100%;
+}
+
+#pizza:hover {
+  transform: rotate(360deg);
+}
+
+header {
+text-align: center;
+margin-top: 10vh;
+}
+
+#homepage-heading-link {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+#homepage-heading-link:hover {
+  transform: scale(1.1);
+}
+
+.bounce span {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    animation: shake .3s ease infinite alternate;
+    font-size: 80px;
+    color: var(--pizza-color-b);
+	text-shadow: 0 1px 0 var(--pizza-color-c), 0 2px 0 var(--pizza-color-c), 0 3px 0 var(--pizza-color-c), 0 4px 0 var(--pizza-color-c), 0 5px 0 var(--pizza-color-c), 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, .4);
+      &:nth-child(2) {
+        animation-delay: 0.10s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.20s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.30s;
+      }
+      &:nth-child(5) {
+        animation-delay: 0.40s;
+      }
+      &:nth-child(6) {
+        animation-delay: 0.50s;
+      }
+      &:nth-child(7) {
+        animation-delay: 0.60s;
+      }
+      &:nth-child(8) {
+        animation-delay: 0.70s;
+      }
+      &:nth-child(9) {
+        animation-delay: 0.80s;
+      }
+      &:nth-child(10) {
+        animation-delay: 0.90s;
+      }
+      &:nth-child(11) {
+        animation-delay: 1.0s;
+      }
+      &:nth-child(12) {
+        animation-delay: 1.10s;
+      }
+      &:nth-child(13) {
+        animation-delay: 1.20s;
+      }
+      &:nth-child(14) {
+        animation-delay: 1.3s;
+      }
+      &:nth-child(15) {
+        animation-delay: 1.40s;
+      }
+    }
+
+@keyframes shake {
+  100% {
+    top: -10px;
+    text-shadow: 0 1px 0 var(--pizza-color-a), 0 2px 0 var(--pizza-color-a), 0 3px 0 var(--pizza-color-a), 0 4px 0 var(--pizza-color-a), 0 5px 0 var(--pizza-color-a), 0 6px 0 var(--pizza-color-a), 0 7px 0 var(--pizza-color-a), 0 8px 0 var(--pizza-color-a), 0 9px 0 var(--pizza-color-a), 0 50px 25px rgba(0, 0, 0, .2);
+  }
+}
+
+@keyframes blinker {
+    0% {
+  color: var(--pizza-color-c);
+    background-color: var(--bg-color);
+  }
+  100% {
+  color: var(--bg-color);
+    background-color: var(--pizza-color-b);
+  }
+}
+
+.blink_me{
+  animation: blinker 0.2s infinite alternate;
+  padding: 1px 2px;
+  border-radius: 3px;
+}
+
+.updates{
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 5px solid var(--text-color);
+  padding: 5px;
+  margin: 1em auto;
+  max-width: 50%
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    --content-width: 100%;
+  }
+  section#main, aside, footer{
+		margin: 0.5ch;
+		padding: 1em;
+  height: 100%;
+    width: var(--content-width)
+  }
+  #pizza{
+    display: none;
+  }
+  }
+
+@media only screen and (min-width: 500px) {
+  .use-a-pc{
+    display: none;
+  }
+}
+
+
