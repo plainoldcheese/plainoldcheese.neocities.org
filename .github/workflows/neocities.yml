@@ -10,12 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       # get api key at
       # https://neocities.org/settings/plainoldcheese#api_key
       - name: 🖥️ Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v1
-        if: ${{ env.NEOCITIES_API_TOKEN }}
         with:
           api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
           cleanup: true
