@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       # get api key at
       # https://neocities.org/settings/plainoldcheese#api_key
-      - name: 🖥️Deploy to Neocities
+      - name: 🖥️ Deploy to Neocities
         uses: bcomnes/deploy-to-neocities@v1
         if: ${{ env.NEOCITIES_API_TOKEN }}
         with:
