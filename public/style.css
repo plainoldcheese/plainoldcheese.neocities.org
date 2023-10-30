@@ -97,8 +97,24 @@ a:hover {
 		text-decoration: none;
 }
 
-h1 {
+h1, h2, h3 {
   font-family: cursive;
+}
+
+.glow {
+	size: 1.5em;
+	color: var(--pizza-color-b);
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--pizza-color-a), 0 0 40px var(--pizza-color-a), 0 0 50px var(--pizza-color-a), 0 0 60px var(--pizza-color-a), 0 0 70px var(--pizza-color-a);
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--pizza-color-b), 0 0 40px var(--pizza-color-b), 0 0 50px var(--pizza-color-b), 0 0 60px var(--pizza-color-b), 0 0 70px var(--pizza-color-b), 0 0 80px var(--pizza-color-b);
+  }
 }
 
 .links {
