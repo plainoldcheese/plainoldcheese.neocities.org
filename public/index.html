@@ -152,62 +152,66 @@ xhttp.send();
 
 <script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
 <script>
-const Webamp = window.Webamp;
-const webamp = new Webamp({
-initialTracks: [
-{
-	metaData: {
-		artist: "plainoldcheese",
-		title: "waveywaveywavey"
-	},
-	url: "https://plainoldcheese.neocities.org/muzak/waveywaveywavey.mp3",
-},
-{
-	metaData: {
-		artist: "plainoldcheese",
-		title: "beauty and torment"
-	},
-	url: "https://plainoldcheese.neocities.org/muzak/beauty-and-torment.mp3",
-},
+  const Webamp = window.Webamp;
+  const webamp = new Webamp({
 
-{
-	metaData: {
-		artist: "plainoldcheese",
-		title: "pulse"
-	},
-	url: "https://plainoldcheese.neocities.org/muzak/pulse.mp3",
-},
-{
-	metaData: {
-		artist: "plainoldcheese",
-		title: "swing"
-	},
-	url: "https://plainoldcheese.neocities.org/muzak/swing.mp3",
-},
-{
-	metaData: {
-		artist: "plainoldcheese",
-		title: "trip"
-	},
-	url: "https://plainoldcheese.neocities.org/muzak/trip.mp3",
-},
-{
-	metaData: {
-		artist: "plainoldcheese",
-		title: "august"
-	},
-	url: "https://plainoldcheese.neocities.org/muzak/august.mp3",
-},
-{
-	metaData: {
-	artist: "plainoldcheese",
-		title: "chakra"
-	},
-	url: "https://plainoldcheese.neocities.org/muzak/chakra.mp3",
-}
-],
-});
-// Returns a promise indicating when it's done loading.
-webamp.renderWhenReady(document.getElementById('app'));
+ initialSkin: {
+        url: './muzak/georgeskin.wsz'
+    },
+    initialTracks: [
+      {
+        metaData: {
+          artist: "plainoldcheese",
+        },
+        url: "https://cdn.discordapp.com/attachments/767085933571866650/1037100053925482526/waveywaveywavey-001.mp3",
+      },
+      {
+        metaData: {
+          artist: "plainoldcheese",
+        },
+        url: "https://cdn.discordapp.com/attachments/767085933571866650/1118925726599626762/pretty_loop_2023-06-15-002.mp3",
+      },
+      {
+        metaData: {
+          artist: "plainoldcheese",
+        },
+        url: "https://cdn.discordapp.com/attachments/767085933571866650/1102616111784153220/Master.mp3",
+      },
+
+      {
+        metaData: {
+          artist: "plainoldcheese",
+        },
+        url: "https://cdn.discordapp.com/attachments/767085933571866650/1087729216428200086/asmr-beats-to-align-your-chakras-to-001.mp3",
+      },
+      {
+        metaData: {
+          artist: "plainoldcheese",
+        },
+        url: "https://cdn.discordapp.com/attachments/767085933571866650/1068104057207668797/beauty-and-torment.mp3",
+      },
+      {
+        metaData: {
+          artist: "plainoldcheese",
+        },
+        url: "https://cdn.discordapp.com/attachments/767085933571866650/1063845864164044820/aphexidm.mp3",
+      },
+      {
+        metaData: {
+          artist: "plainoldcheese",
+        },
+        url: "https://cdn.discordapp.com/attachments/767085933571866650/1061355151811678368/idm4.mp3",
+      },
+      {
+        metaData: {
+          artist: "plainoldcheese",
+        },
+        url: "https://cdn.discordapp.com/attachments/767085933571866650/1047080639008079873/tests-003.mp3",
+      },
+    ],
+  });
+
+  // Returns a promise indicating when it's done loading.
+  webamp.renderWhenReady(document.getElementById("app"));
 </script>
 </html>
