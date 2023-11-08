@@ -16,6 +16,9 @@
 </header>
 	<main>
 
+    <div id="app" style="height: 100vh; position: fixed; top: 0; left: 0">
+				<!-- Webamp will attempt to center itself within this div -->
+	</div>
 	<aside id="cbox">
 	<h1>say hi!</h1>
 		<iframe
@@ -75,6 +78,7 @@
 		<article id="mastodon"></article>
 	  </section>
 	</aside>
+
 
 	</main>
 
@@ -145,4 +149,65 @@ xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=pla
 xhttp.send();
 </script>
 
+
+<script src="https://unpkg.com/webamp@1.4.2/built/webamp.bundle.min.js"></script>
+<script>
+const Webamp = window.Webamp;
+const webamp = new Webamp({
+initialTracks: [
+{
+	metaData: {
+		artist: "plainoldcheese",
+		title: "waveywaveywavey"
+	},
+	url: "https://plainoldcheese.neocities.org/muzak/waveywaveywavey.mp3",
+},
+{
+	metaData: {
+		artist: "plainoldcheese",
+		title: "beauty and torment"
+	},
+	url: "https://plainoldcheese.neocities.org/muzak/beauty-and-torment.mp3",
+},
+
+{
+	metaData: {
+		artist: "plainoldcheese",
+		title: "pulse"
+	},
+	url: "https://plainoldcheese.neocities.org/muzak/pulse.mp3",
+},
+{
+	metaData: {
+		artist: "plainoldcheese",
+		title: "swing"
+	},
+	url: "https://plainoldcheese.neocities.org/muzak/swing.mp3",
+},
+{
+	metaData: {
+		artist: "plainoldcheese",
+		title: "trip"
+	},
+	url: "https://plainoldcheese.neocities.org/muzak/trip.mp3",
+},
+{
+	metaData: {
+		artist: "plainoldcheese",
+		title: "august"
+	},
+	url: "https://plainoldcheese.neocities.org/muzak/august.mp3",
+},
+{
+	metaData: {
+	artist: "plainoldcheese",
+		title: "chakra"
+	},
+	url: "https://plainoldcheese.neocities.org/muzak/chakra.mp3",
+}
+],
+});
+// Returns a promise indicating when it's done loading.
+webamp.renderWhenReady(document.getElementById('app'));
+</script>
 </html>
