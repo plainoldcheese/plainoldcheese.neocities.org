@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Pacifico&family=Pixelify+Sans&family=Satisfy&display=swap');
 :root {
   --content-width: 400px;
   --text-color: #209A50;
@@ -32,47 +32,65 @@ main {
 }
 
 main > *{
-  margin: 1em;
-  padding: 1em;
+  margin: 5px;
+  padding: 5px;
+  padding-left: 25px;
 }
 
 section#main, aside{
   max-width: var(--content-width);
-  height: 50vh;
+  height: 75vh;
   overflow: clip;
-  border: 5px solid var(--text-color);
+  border: 2.5px solid var(--text-color);
   background-color: var(--bg-color);
-  padding: 2em;
+  padding: 15px;
   width: 30vw
 }
+
+/* mastodon */
 
 #mastodon-section{
   overflow-wrap:  break-word;
   overflow-y: scroll;
+  height: 45%;
 }
 
 #mastodon-posts * {
-  max-width: 100%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
 article#mastodon > a > article{
-margin: 3ch 0;
-padding: 0.5ch;
-  color: var(--pizza-color-b);
-background-color: var(--bg-color-b);
-
+	margin: 3ch 0;
+	padding: 0.5ch;
+	color: var(--pizza-color-b);
+	background-color: var(--bg-color-b);
 }
+
 article#mastodon > a {
 	 text-decoration: none
 }
 
 article#mastodon > a > article > *{
 		display: block;
-margin: 5px auto;
-max-width: 90%;
+		margin: 5px auto;
+		max-width: 90%;
 }
 
+/* chat */
+#cbox{
+		height: 45%;
+}
+/* sidebar */
+
+#sidebar {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	/* height: 100vh */
+}
+
+/* other std elements n stuff */
 
 footer{
   max-width: 50%;
@@ -98,7 +116,8 @@ a:hover {
 }
 
 h1, h2, h3 {
-  font-family: cursive;
+  font-family: 'Pacifico', cursive;
+  margin: 5px;
 }
 
 .glow {
@@ -232,6 +251,73 @@ margin-top: 10vh;
   max-width: 50%
 }
 
+
+/* music player */
+
+#musicplayer {
+  max-width: 200px;
+  margin: 0 auto;
+  color: black;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+.songtitle {
+  font-size: medium;
+  box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181, 2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
+  margin: 5px;
+  height: 31px;
+  font-size: 12px;
+  background: #ccc;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 31px;
+  text-align: center;
+}
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+}
+.controls > * {
+  height: 31px;
+  width: 88px;
+}
+.controls > * {
+  line-height: 31px;
+  text-align: center;
+  background: #ccc;
+  box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181, 2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
+  margin: 5px;
+}
+.controls > *:active {
+  box-shadow: -2px -2px #818181, -2px 0 #818181, 0 -2px #818181, -4px -4px black, -4px 0 black, 0 -4px black, 2px 2px #e0dede, 0 2px #e0dede, 2px 0 #e0dede, 2px -2px #818181, -2px 2px #e0dede, -4px 2px black, -4px 4px white, 4px 4px white, 4px 0 white, 0 4px white, 2px -4px black, 4px -4px white;
+}
+.seeking > * {
+  text-align: center;
+  display: inline-block;
+  line-height: 31px;
+}
+.seek_slider {
+}
+.seek_slider {
+  width: 50%;
+  margin: 0;
+  height: 31px;
+  padding: 0;
+}
+.seeking {
+  display: flex;
+  justify-content: center;
+  background: #ccc;
+  box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181, 2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
+  margin: 5px;
+}
+.seeking > * {
+  margin: auto;
+}
+.songtitle {
+}
+
 @media only screen and (max-width: 500px) {
   :root {
     --content-width: 100%;
@@ -240,10 +326,18 @@ margin-top: 10vh;
 		margin: 0.5ch;
 		padding: 1em;
   height: 100%;
-    width: var(--content-width)
+    width: 85%
   }
   #pizza{
     display: none;
+  }
+  footer{
+  max-width: 75%;
+  margin: 0 auto;
+  }
+  main {
+    flex-direction: column;
+	max-width: var(--content-width);
   }
   }
 
