@@ -17,6 +17,7 @@ html{
 body {
   background-image: url(bg.png);
   background-repeat: repeat;
+  background-attachment: fixed;
   font-family: 'Comic Neue', cursive;
   font-weight: 700;
   color: var(--text-color);
