@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>breathe</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <style>
+    html {
+      background: rgb(238, 174, 202);
+      background: radial-gradient(
+        circle,
+        rgba(238, 174, 202, 1) 0%,
+        #a6e7ee 100%
+      );
+    }
+    .orb {
+      color: transparent;
+      margin: 33vh auto;
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      background: rgba(188, 237, 243, 0.889);
+      animation: breathe 15s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+    }
+
+    @keyframes breathe {
+      0% {
+        box-shadow:
+          0 0 0 0px rgba(188, 237, 243, 0.3),
+          0 0 0 0px rgba(188, 237, 243, 0.3),
+          0 0 0 0px rgba(188, 237, 243, 0.3),
+          0 0 0 0px rgba(188, 237, 243, 0.3),
+          0 0 0 0px rgba(188, 237, 243, 0.3);
+      }
+      50% {
+        box-shadow:
+          0 0 0 calc(15px * 1.5) rgba(188, 237, 243, 0.3),
+          0 0 0 calc(30px * 1.5) rgba(188, 237, 243, 0.3),
+          0 0 0 calc(45px * 1.5) rgba(188, 237, 243, 0.3),
+          0 0 0 calc(60px * 1.5) rgba(188, 237, 243, 0.3),
+          0 0 0 calc(75px * 1.5) rgba(188, 237, 243, 0.3);
+      }
+      100% {
+        box-shadow:
+          0 0 0 0px rgba(188, 237, 243, 0.3),
+          0 0 0 0px rgba(188, 237, 243, 0.3),
+          0 0 0 0px rgba(188, 237, 243, 0.3),
+          0 0 0 0px rgba(188, 237, 243, 0.3),
+          0 0 0 0px rgba(188, 237, 243, 0.3);
+      }
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center; color: white; font-style: italic">
+      breathe
+    </h1>
+    <p class="orb"></p>
+  </body>
+</html>
