@@ -318,6 +318,50 @@ margin-top: 10vh;
 }
 .songtitle {
 }
+#musicplayer{
+	position: relative; /* Establishes a positioning context for the pseudo-element */
+  width: 80%; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  
+  overflow: hidden; /* Ensures image does not overflow the container */
+}
+
+#musicplayer::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute; /* Position the pseudo-element absolutely within the container */
+  top: -10%;
+  left: 10%;
+  width: 80%; /* Stretch the image to cover the entire width */
+  height: 80%; /* Stretch the image to cover the entire height */
+  background: url('under_construction.png') no-repeat center center; /* Set the image as background */
+  background-size: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+  pointer-events: none; /* Allows interactions with elements below the image */
+  z-index: 1; /* Ensures the image is on top of the content */
+	 animation: shake 1s infinite; /* Apply the animation */
+}
+
+#musicplayer p {
+  position: relative; /* Ensure text is above the pseudo-element */
+  z-index: 2; /* Makes sure the content is visible above the image */
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg); /* Rotate slightly clockwise */
+  }
+  50% {
+    transform: rotate(0deg); /* Back to original position */
+  }
+  75% {
+    transform: rotate(-5deg); /* Rotate slightly counterclockwise */
+  }
+  100% {
+    transform: rotate(0deg); /* Back to original position */
+  }
+}
 
 @media only screen and (max-width: 500px) {
   :root {
