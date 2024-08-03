@@ -318,7 +318,7 @@
 						</script>
 					</div>
 
-					// sadgirls.wtf radio (not affiliated, just like the radio)
+					<!--// sadgirls.wtf radio (not affiliated, just like the radio)-->
 					<div>
 					  <h2><a href="https://sadgirlsclub.wtf/">sadgirls.wtf radio</a></h2>
 					  <iframe src="https://sadgirlsclub.wtf/blog/posts/pip.html" width="100%" height="300px"></iframe>
@@ -892,7 +892,50 @@
 			font-size: 12px;
 			font-weight: 400;
 		}
+#musicplayer{
+	position: relative; /* Establishes a positioning context for the pseudo-element */
+  width: 80%; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  
+  overflow: hidden; /* Ensures image does not overflow the container */
+}
 
+#musicplayer::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute; /* Position the pseudo-element absolutely within the container */
+  top: -10%;
+  left: 10%;
+  width: 80%; /* Stretch the image to cover the entire width */
+  height: 80%; /* Stretch the image to cover the entire height */
+  background: url('under_construction.png') no-repeat center center; /* Set the image as background */
+  background-size: cover; /* Ensures the image covers the container while maintaining its aspect ratio */
+  pointer-events: none; /* Allows interactions with elements below the image */
+  z-index: 1; /* Ensures the image is on top of the content */
+	 animation: wiggle 1s infinite; /* Apply the animation */
+}
+
+#musicplayer p {
+  position: relative; /* Ensure text is above the pseudo-element */
+  z-index: 2; /* Makes sure the content is visible above the image */
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg); /* Rotate slightly clockwise */
+  }
+  50% {
+    transform: rotate(0deg); /* Back to original position */
+  }
+  75% {
+    transform: rotate(-5deg); /* Rotate slightly counterclockwise */
+  }
+  100% {
+    transform: rotate(0deg); /* Back to original position */
+  }
+}
 		.songtitle {
 			font-size: medium;
 			box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181, 2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
